@@ -1,32 +1,103 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="clima.MainPage">
+             x:Class="clima.MainPage"
+             BackgroundColor="Black"
+             Shell.NavBarIsVisible="false">
 
     <Grid>
          <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="60"/>
-             <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+             <RowDefinition Height="*"/>
          </Grid.RowDefinitions>
+
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="40"/>
-              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="120"/>
+              <ColumnDefinition Width="120"/>
+              <ColumnDefinition Width="120"/>
             </Grid.ColumnDefinitions>
+
+            <Image 
+                Source="imgnoite.jpg"
+                Aspect="Fill"
+                Grid.RowSpan="4"
+                Grid.ColumnSpan="3"/>
 
         <Frame 
 
              x:Name="temperatura"
-             Opacity="1"
-             
-             BackgroundColor="#dcfce8"
+             Opacity="10"
+             Grid.Column="0"
+             Grid.RowSpan="2"
+             BackgroundColor="#45d0d0d0"
              CornerRadius="30"
-             Margin="10,0,10,40"
              HeightRequest="120"
              VerticalOptions="Center">
 
          </Frame>
+
+         <Frame 
+             x:Name="comoestaumidade"
+             Opacity="1"
+             Grid.Column="1"
+             Grid.Row="0"
+             BackgroundColor="#45d0d0d0"
+             CornerRadius="30"
+             HeightRequest="120"
+             VerticalOptions="Center">
+
+         </Frame>
+
+          <Frame 
+             x:Name="comoestanublado"
+             Opacity="1"
+             Grid.Column="2"
+             Grid.Row="1"
+             BackgroundColor="#45d0d0d0"
+             CornerRadius="30"
+             HeightRequest="120"
+             VerticalOptions="Center">
+
+         </Frame>
+
+          <Frame 
+             x:Name="comoestasol"
+             Opacity="1"
+             Grid.Column="3"
+             Grid.Row="2"
+             BackgroundColor="#45d0d0d0"
+             CornerRadius="30"
+             HeightRequest="120"
+             VerticalOptions="Center">
+
+         </Frame>
+
+          <Frame 
+             x:Name="comoestatempo"
+             Opacity="1"
+             Grid.Column="3"
+             Grid.Row="3"
+             BackgroundColor="#45d0d0d0"
+             CornerRadius="30"
+             HeightRequest="120"
+             VerticalOptions="Center">
+
+         </Frame>
+
+          <Frame 
+             x:Name="comoestaforça"
+             Opacity="1"
+             Grid.Column="0"
+             Grid.RowSpan="2"
+             BackgroundColor="#45d0d0d0"
+             CornerRadius="30"
+             HeightRequest="120"
+             VerticalOptions="Center">
+
+         </Frame>
+
 
     </Grid>
 
