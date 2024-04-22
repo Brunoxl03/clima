@@ -7,97 +7,63 @@
 
     <Grid>
          <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
             <RowDefinition Height="100"/>
             <RowDefinition Height="100"/>
              <RowDefinition Height="*"/>
          </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="120"/>
-              <ColumnDefinition Width="120"/>
-              <ColumnDefinition Width="120"/>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <Image 
                 Source="imgnoite.jpg"
-                Aspect="Fill"
+                Aspect="AspectFill"
                 Grid.RowSpan="4"
                 Grid.ColumnSpan="3"/>
 
-        <Frame 
 
+        <Frame 
              x:Name="temperatura"
-             Opacity="10"
              Grid.Column="0"
              Grid.RowSpan="2"
-             BackgroundColor="#45d0d0d0"
+             Grid.Row="0"
+             BackgroundColor="#20d0d0d0"
              CornerRadius="30"
-             HeightRequest="120"
-             VerticalOptions="Center">
+             VerticalOptions="Fill">
+
+
+             
+        <Label
+            x:Name="LabelTemp"/>
+
+        <Label
+            x:Name="LabelCity"/>
+
+        </Frame>
+        
+
+        <Frame 
+             x:Name="umidade"
+             Grid.Column="2"
+             Grid.RowSpan="0"
+             BackgroundColor="#20d0d0d0"
+             CornerRadius="30"
+             VerticalOptions="Fill">
 
          </Frame>
 
          <Frame 
-             x:Name="comoestaumidade"
-             Opacity="1"
-             Grid.Column="1"
-             Grid.Row="0"
-             BackgroundColor="#45d0d0d0"
-             CornerRadius="30"
-             HeightRequest="120"
-             VerticalOptions="Center">
-
-         </Frame>
-
-          <Frame 
-             x:Name="comoestanublado"
-             Opacity="1"
+             x:Name="climax"
              Grid.Column="2"
-             Grid.Row="1"
-             BackgroundColor="#45d0d0d0"
+             Grid.RowSpan="0"
+             BackgroundColor="#20d0d0d0"
              CornerRadius="30"
-             HeightRequest="120"
-             VerticalOptions="Center">
+             VerticalOptions="Fill">
 
          </Frame>
-
-          <Frame 
-             x:Name="comoestasol"
-             Opacity="1"
-             Grid.Column="3"
-             Grid.Row="2"
-             BackgroundColor="#45d0d0d0"
-             CornerRadius="30"
-             HeightRequest="120"
-             VerticalOptions="Center">
-
-         </Frame>
-
-          <Frame 
-             x:Name="comoestatempo"
-             Opacity="1"
-             Grid.Column="3"
-             Grid.Row="3"
-             BackgroundColor="#45d0d0d0"
-             CornerRadius="30"
-             HeightRequest="120"
-             VerticalOptions="Center">
-
-         </Frame>
-
-          <Frame 
-             x:Name="comoestaforça"
-             Opacity="1"
-             Grid.Column="0"
-             Grid.RowSpan="2"
-             BackgroundColor="#45d0d0d0"
-             CornerRadius="30"
-             HeightRequest="120"
-             VerticalOptions="Center">
-
-         </Frame>
-
 
     </Grid>
 
