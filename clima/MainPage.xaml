@@ -5,11 +5,13 @@
              BackgroundColor="Black"
              Shell.NavBarIsVisible="false">
 
-    <Grid>
+    <Grid RowSpacing="10"
+            ColumnSpacing="10"> 
          <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="100"/>
             <RowDefinition Height="100"/>
-             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
          </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -27,41 +29,64 @@
 
         <Frame 
              x:Name="temperatura"
-             Grid.Column="0"
-             Grid.RowSpan="2"
-             Grid.Row="0"
              BackgroundColor="#20d0d0d0"
              CornerRadius="30"
-             VerticalOptions="Fill">
-
-
-             
-        <Label
-            x:Name="LabelTemp"/>
+             VerticalOptions="Fill"
+             Grid.Column="0"
+             Grid.Row="1"
+             Grid.RowSpan="2">
 
         <Label
-            x:Name="LabelCity"/>
+            x:Name="LabelTemp"
+            Text="tempo"
+            TextColor="White"/>
+
+        <Label
+            x:Name="LabelCity"
+            Text="cidade"
+            TextColor="White"/>
 
         </Frame>
         
 
         <Frame 
              x:Name="umidade"
-             Grid.Column="2"
-             Grid.RowSpan="0"
              BackgroundColor="#20d0d0d0"
              CornerRadius="30"
-             VerticalOptions="Fill">
+             VerticalOptions="Fill"
+             Grid.Column="1"
+             Grid.Row="1">
 
          </Frame>
 
          <Frame 
              x:Name="climax"
-             Grid.Column="2"
-             Grid.RowSpan="0"
              BackgroundColor="#20d0d0d0"
              CornerRadius="30"
-             VerticalOptions="Fill">
+             VerticalOptions="Fill"
+             Grid.Column="2"
+             Grid.Row="1">
+
+         </Frame>
+
+         
+         <Frame 
+             x:Name="Sol"
+             BackgroundColor="#20d0d0d0"
+             CornerRadius="30"
+             VerticalOptions="Fill"
+             Grid.Column="1"
+             Grid.Row="2">
+
+         </Frame>
+         
+         <Frame 
+             x:Name="Vento"
+             BackgroundColor="#20d0d0d0"
+             CornerRadius="30"
+             VerticalOptions="Fill"
+             Grid.Column="2"
+             Grid.Row="2">
 
          </Frame>
 
