@@ -1,47 +1,65 @@
-﻿namespace clima;
+﻿using System.Text.Json;
+ 
+namespace clima;
 
 public partial class MainPage : ContentPage
 
 {
+	Resposta resposta;
+	const string Url="https://api.hgbrasil.com/weather?woeid=455927&key=7ab0717b";
 
 	public MainPage()
 	{
 		InitializeComponent();
+		AtualizaTempo();
 	}
-
-	results results = new results();
-	void TestaLayout ()
+	async void AtualizaTempo()
+  {
+	try
 	{
-		results.temp =23;
+		var httpClient = new HttpClient();
+		var  response = await httpClient.GetAsync(Url);
+		if (response.IsSuccessStatusCode)
+		{
+			var content = await response.Content.ReadAsStringAsync();
+			resposta = JsonSerializer.Deserialize<Resposta>(content);
+		}
+		preenchertela();
 
 	}
+	catch (Exception e)
+	{
+		System.Diagnostics.Debug.WriteLine(e);
+	}
+
+  }
+	
 	void preenchertela()
 	{
 		LabelTemp.Text = resposta.results.temp.ToString();
 
-		LabelDescription.Text = resposta.results.temp.ToString();
+		LabelDescription.Text = resposta.results.claudiness.ToString();
 
 		LabelCity.Text = resposta.results.city;
 
-		LabelHumidity.Text = resposta.results.temp.ToString();
+		LabelHumidity.Text = resposta.results.humidity.ToString();
 
-		LabelRain.Text= resposta.results.rain;
+		LabelRain.Text= resposta.results.rain.ToString();
 
 		LabelSunrise.Text= resposta.results.sunrise;
 
 		Labelsunset.Text= resposta.results.sunset;
 
-		labelwind_speedy= resposta.results.wind_speedy;
+		labelwind_speedy.Text= resposta.results.wind_speedy.ToString();
 
-		Labelwind_direction= resposta.results.wind_direction;
+		Labelwind_direction.Text= resposta.results.wind_direction.ToString();
 
-		Labelmoon_phase= resposta.results.moon_phase;
+		Labelmoon_phase.Text= resposta.results.moon_phase;
 
-		Labelcurrently= resposta.results.currently;
-
-		Labelimg_id= resposta.results.img_id;
+		Labelcurrently.Text= resposta.results.currently;
 		
-		Labelcondition_code= resposta.results.condition_code;
+		Labelcondition_code.Text= resposta.results.condition_code;
+
 
 
 	}

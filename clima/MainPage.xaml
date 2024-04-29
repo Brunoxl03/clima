@@ -36,9 +36,21 @@
              Grid.Row="1"
              Grid.RowSpan="2">
 
+             <Grid>
+         <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+         </Grid.RowDefinitions>
+
         <Label
             x:Name="LabelTemp"
             Text="tempo"
+            TextColor="White"/>
+
+        <Label
+            x:Name="Labelcurrently"
+            Text="temperatura"
             TextColor="White"/>
 
         <Label
@@ -46,6 +58,12 @@
             Text="cidade"
             TextColor="White"/>
 
+        <Label
+            x:Name="LabelDescription"
+            Text="sol"
+            TextColor="White"/>
+        
+        </Grid>
         </Frame>
         
 
@@ -57,7 +75,21 @@
              Grid.Column="1"
              Grid.Row="1">
 
-         </Frame>
+           <Label
+            x:Name="LabelHumidity"
+            Text="umidade"
+            TextColor="White"/>
+
+             <Label
+            x:Name="LabelRain"
+            Text="chuva"
+            TextColor="White"/>
+
+            <Label
+            x:Name="Labelcondition_code"
+            Text="chuva"
+            TextColor="White"/>
+        </Frame>
 
          <Frame 
              x:Name="climax"
@@ -67,26 +99,51 @@
              Grid.Column="2"
              Grid.Row="1">
 
-         </Frame>
+          <Label
+            x:Name="LabelSunrise"
+            Text="amanhecer"
+            TextColor="White"/>
+
+          <Label
+            x:Name="Labelsunset"
+            Text="anoitecer"
+            TextColor="White"/>
+
+        </Frame>
 
          
-         <Frame 
-             x:Name="Sol"
+        <Frame 
+             x:Name="vento"
              BackgroundColor="#20d0d0d0"
              CornerRadius="30"
              VerticalOptions="Fill"
              Grid.Column="1"
              Grid.Row="2">
 
-         </Frame>
+          <Label
+            x:Name="labelwind_speedy"
+            Text="força do vento"
+            TextColor="White"/>
+
+             <Label
+            x:Name="Labelwind_direction"
+            Text="direcao do vento"
+            TextColor="White"/>
+
+        </Frame>
          
-         <Frame 
+        <Frame 
              x:Name="Vento"
              BackgroundColor="#20d0d0d0"
              CornerRadius="30"
              VerticalOptions="Fill"
              Grid.Column="2"
              Grid.Row="2">
+
+         <Label
+            x:Name="Labelmoon_phase"
+            Text="fases da lua"
+            TextColor="White"/>
 
          </Frame>
 
