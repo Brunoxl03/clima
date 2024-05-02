@@ -21,7 +21,7 @@
             </Grid.ColumnDefinitions>
 
             <Image 
-                Source="imgnoite.jpg"
+                x:Name="imgBackground"
                 Aspect="AspectFill"
                 Grid.RowSpan="4"
                 Grid.ColumnSpan="3"/>
@@ -42,6 +42,11 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
          </Grid.RowDefinitions>
+         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+         </Grid.ColumnDefinitions>
 
         <Label
             x:Name="LabelTemp"
@@ -85,6 +90,11 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
          </Grid.RowDefinitions>
+         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+         </Grid.ColumnDefinitions>
 
            <Label
             x:Name="LabelHumidity"
@@ -120,6 +130,11 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
          </Grid.RowDefinitions>
+         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+         </Grid.ColumnDefinitions>
 
           <Label
             x:Name="LabelSunrise"
@@ -151,6 +166,11 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
          </Grid.RowDefinitions>
+         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+         </Grid.ColumnDefinitions>
 
           <Label
             x:Name="labelwind_speedy"
@@ -163,6 +183,9 @@
             Text="direcao do vento"
              Grid.Row="1"
             TextColor="White"/>
+            
+
+
             
         </Grid>
         </Frame>
@@ -181,12 +204,25 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
          </Grid.RowDefinitions>
+         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+         </Grid.ColumnDefinitions>
 
          <Label
             x:Name="Labelmoon_phase"
             Text="fases da lua"
-            Grid.Row="0"
+            Grid.Row="1"
+            Grid.Column="1"
             TextColor="White"/>
+         <Label
+            Text="Fase:"
+            Grid.Row="1"
+            Grid.Column="0"
+            FontSize="12"
+            TextColor="White"
+            HorizontalOptions="Center"/>
 
          </Grid>
          </Frame>

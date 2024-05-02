@@ -60,6 +60,36 @@ public partial class MainPage : ContentPage
 		
 		Labelcondition_code.Text= resposta.results.condition_code;
 
+		if(resposta.results.moon_phase=="full")
+		Labelmoon_phase.Text ="cheia";
+		else if(resposta.results.moon_phase=="new")
+		Labelmoon_phase.Text = "nova";
+		else if(resposta.results.moon_phase=="waxing_crescent")
+		Labelmoon_phase.Text = "lua crescente";
+		else if(resposta.results.moon_phase=="waxing_gibbous")
+		Labelmoon_phase.Text = "gibosa crescente";
+		else if(resposta.results.moon_phase=="waning_crescent")
+		Labelmoon_phase.Text = "lua minguante";
+		else if(resposta.results.moon_phase=="last_quarter")
+		Labelmoon_phase.Text = "quarto minguante";
+		else if(resposta.results.moon_phase=="last_quarter")
+		Labelmoon_phase.Text = "quarta crescente";
+		else if(resposta.results.moon_phase=="waning_gibbous")
+		Labelmoon_phase.Text = "gibosa minguante";
+		
+
+		if(resposta.results.currently=="dia")
+		{
+			if(resposta.results.rain<=10)
+			imgBackground.Source="imgdia.webp";
+			if(resposta.results.claudiness>=10)
+			imgBackground.Source="imgnublado.webp";
+			else
+			imgBackground.Source="imgnoite.jpg";
+		}
+
+
+
 
 
 	}
